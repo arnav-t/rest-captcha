@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 20*1024	# 20 kB
 
 def randName(size):
-	return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(size))
+	return ''.join( random.choice(string.ascii_lowercase + string.digits) for _ in range(size) )
 
 def checkExtension(fileName):
 	return fileName.split('.')[1].lower() == 'jpeg'
